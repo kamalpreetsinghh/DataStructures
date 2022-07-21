@@ -16,18 +16,22 @@ public class ArrayQueue {
     public void enqueue(int item) {
         if(isFull()) throw new StackOverflowError();
 
-        if(front == rear && front == -1) {
-            front = rear = 0;
-            items[rear] = item;
-        } else {
-            items[++rear] = item;
-        }
+        if(front == -1)
+            front = 0;
+
+        items[++rear] = item;
     }
 
     public int dequeue() {
+        int item;
         if(isEmpty()) throw new IllegalStateException();
-
-        return items[front++];
+        item = items[front];
+        if(front >= rear) {
+            front = rear = -1;
+        } else {
+            front++;
+        }
+        return item;
     }
 
     public int peek() {
@@ -37,7 +41,7 @@ public class ArrayQueue {
     }
 
     public boolean isEmpty() {
-        return (front == -1 && rear == -1) || front > rear;
+        return (front == -1);
     }
 
     public boolean isFull() {
