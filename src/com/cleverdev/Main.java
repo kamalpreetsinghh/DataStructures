@@ -2,18 +2,13 @@ package com.cleverdev;
 
 public class Main {
     public static void main(String[] args) {
-//        Array array = new Array(5);
-//        array.insert(2);
-//        array.insert(4);
-//        array.insert(6);
-//        array.insert(8);
-//        array.insert(9);
-//        array.insert(10);
-//        array.removeAt(3);
-//        array.removeAt(2);
-//        array.print();
-
-        LinkedList linkedList = new LinkedList();
-
+        Stack stack = new Stack(5);
+        stack.push(5);
+        stack.push(10);
+        stack.push(15);
+        stack.push(20);
+        stack.push(25);
+        System.out.println(stack.pop());
+        System.out.println(stack.toString());
     }
 }
