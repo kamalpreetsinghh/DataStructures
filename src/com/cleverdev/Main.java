@@ -4,19 +4,18 @@ import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {
-        CircularQueue queue = new CircularQueue(5);
-        System.out.println(queue.dequeue());
+        StackQueue queue = new StackQueue();
         queue.enqueue(5);
         queue.enqueue(10);
         queue.enqueue(15);
         queue.enqueue(20);
-        queue.enqueue(25);
-        System.out.println(queue.dequeue());
-        System.out.println(queue.peek());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
+        queue.enqueue(5);
+        queue.enqueue(23);
+        queue.dequeue();
+        queue.printQueue();
+//        System.out.println(queue.dequeue());
+//        System.out.println(queue.dequeue());
+//        System.out.println(queue.dequeue());
+//        System.out.println(queue.dequeue());
     }
 }

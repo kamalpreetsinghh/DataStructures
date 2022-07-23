@@ -2,12 +2,12 @@ package com.cleverdev;
 
 import java.util.Arrays;
 
-public class ArrayQueue {
+public class Queue {
     private final int[] items;
     private int front;
     private int rear;
 
-    ArrayQueue(int size) {
+    Queue(int size) {
         items = new int[size];
         front = -1;
         rear = -1;
@@ -45,7 +45,7 @@ public class ArrayQueue {
     }
 
     public boolean isFull() {
-        return rear == items.length -1;
+        return front == 0 && rear == items.length -1;
     }
 
     public String toString() {
