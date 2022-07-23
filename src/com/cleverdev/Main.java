@@ -4,7 +4,8 @@ import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayQueue queue = new ArrayQueue(5);
+        CircularQueue queue = new CircularQueue(5);
+        System.out.println(queue.dequeue());
         queue.enqueue(5);
         queue.enqueue(10);
         queue.enqueue(15);
@@ -17,6 +18,5 @@ public class Main {
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
-        System.out.println(queue.toString());
     }
 }
