@@ -42,6 +42,7 @@ public class CircularQueue {
 
         return items[front];
     }
+
     public boolean isFull() {
         if(front == 0 && rear == size - 1) {
             return true;
