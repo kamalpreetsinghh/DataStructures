@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class StackQueue {
-    private Stack<Integer> stack1 = new Stack<>();
-    private Stack<Integer> stack2 = new Stack<>();
+    private final Stack<Integer> stack1 = new Stack<>();
+    private final Stack<Integer> stack2 = new Stack<>();
 
     public void enqueue(int item) {
         stack1.push(item);

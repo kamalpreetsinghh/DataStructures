@@ -4,7 +4,7 @@ public class CircularQueue {
     private final int[] items;
     private int front;
     private int rear;
-    private int size;
+    private final int size;
 
     CircularQueue(int size) {
         this.size = size;
